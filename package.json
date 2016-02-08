@@ -1,0 +1,20 @@
+{
+  "name": "godev-sprint6-server-chat",
+  "version": "1.0.0",
+  "description": "Server for chat application in sprint 6",
+  "author": "Dragos Badea <bedeabza@gmail.com>",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "moment": "^2.11.1",
+    "mongoose": "^4.3.5",
+    "promise": "^7.1.1",
+    "underscore": "^1.8.3",
+    "xss-filters": "^1.2.6"
+  }
+}
