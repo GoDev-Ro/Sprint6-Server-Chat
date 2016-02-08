@@ -67,9 +67,12 @@ router.route('/messages/:participant')
         
         participants.get(req.params.participant).then(
             function () {
-                messages.getAll().then(
+                var p1 = participants.touch(req.params.participant);
+                var p2 = messages.getAll();
+                
+                Promise.all([p1, p2]).then(
                     function (result) {
-                        res.json(result);
+                        res.json(result[1]);
                     },
                     fail
                 );
