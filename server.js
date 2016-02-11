@@ -30,7 +30,7 @@ router.route('/participants')
         res.header('Access-Control-Allow-Methods', 'GET, POST').send();
     })
     .get(function(req, res) {
-        participants.getAll(3600).then(
+        participants.getAll(6).then(
             function(result) {
                 res.json(result);
             },

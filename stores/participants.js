@@ -102,7 +102,6 @@ module.exports = {
     touch: function(id) {
         return new Promise(function(resolve, reject) {
             try {
-                console.log('aa');
                 Participant.update({_id: id}, {$set: {last_active: Date.now()}}, {multi: false}, function(err) {
                     if (err) {
                         reject(err);
